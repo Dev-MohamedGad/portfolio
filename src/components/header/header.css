@@ -1,0 +1,146 @@
+/* =============================
+
+header
+================================ */
+header.flex {
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 1.2rem;
+}
+/* header nav*/
+header nav {
+  background-color: var(--bgheader);
+  padding: 0.7rem 1.6rem;
+  border-radius: 55px;
+  box-shadow: 1px 1px 20px #2323242a;
+}
+header ul.flex {
+  gap: 1rem;
+  justify-content: center;
+}
+
+header ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+a:hover {
+  cursor: pointer;
+}
+
+header ul li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* =====================
+ Buttons 
+ ====================== */
+header button {
+  font-size: 1.2rem;
+}
+
+header button.menu {
+  display: none;
+}
+header .icon-menu,
+header button.mode {
+  background-color: var(--bgheader);
+  height: 2.4rem;
+  width: 2.4rem;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--subtitle);
+  transition: 0.2s;
+  border: 1px solid rgba(244, 165, 95, 0.249);
+  box-shadow: 1px 1px 60px #000000;
+}
+.icon-sun{
+  color: orange;
+}
+
+header .icon-menu:hover,
+header button.mode:hover {
+  color: var(--title);
+  border: 1px solid rgb(244, 165, 96);
+}
+
+header .icon-close {
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  transition: 0.3s;
+}
+
+header .icon-close:hover {
+  font-size: 1.7rem;
+  color: crimson;
+  rotate: 180deg;
+}
+header .fixed {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(40, 40, 48, 0.91);
+  backdrop-filter: blur(4px);
+}
+header .fixed ul.model {
+  width: 85%;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondray);
+  animation: anmimenu 1s;
+}
+
+/* animation*/
+@keyframes anmimenu {
+  0% {
+    scale: 0;
+  }
+
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/* ul model*/
+header .fixed ul.model li {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.77rem;
+  padding-top: 0.5rem;
+}
+
+header .fixed ul.model li:last-child {
+  border: none;
+  padding-bottom: 0.77rem;
+  padding-top: 0.5rem;
+}
+
+header .fixed ul.model li:first-child {
+  text-align: right;
+  border: none;
+  padding-bottom: 0;
+  padding-top: 0.2rem;
+}
+header .fixed ul.model li a {
+  font-size: 1rem;
+}
+
+/* Media Quiery*/
+@media (max-width: 700px) {
+  header.flex nav {
+    display: none;
+  }
+
+  header button.menu {
+    display: block;
+  }
+}
